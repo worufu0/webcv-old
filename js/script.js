@@ -6,7 +6,7 @@
         }
     });
 
-    // Menu
+    // Show/hide menu
     $('.header__hamburger-a').on('click', function () {
         if ($('html').hasClass('html__menu-show')) {
             $('html').removeClass('html__menu-show');
@@ -15,6 +15,7 @@
         }
     });
 
+    // Hide menu after click nav
     $('.menu-main__item').on('click', function () {
         if ($('html').hasClass('html__menu-show')) {
             $('html').removeClass('html__menu-show');

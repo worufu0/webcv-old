@@ -5,7 +5,7 @@
     --whitish: #ccc;
     --grey: #777;
     --greyish: #999;
-    --accent: #f2cb05;
+    --accent: #f2cc0c;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
@@ -19,7 +19,7 @@
 }
 
 html {
-    font-size: 18px;
+    font-size: 16px;
     cursor: default;
 }
 
@@ -77,16 +77,13 @@ a:hover {
 
 @media (min-width: 1600px) {
     .container-fluid {
-        padding-left: 4.25rem;
-        padding-right: 4.25rem;
+        padding: 68px;
     }
 }
 
 .full-height {
     min-height: 100vh;
 }
-
-/* 1.2 Typography */
 
 .font-custom {
     font-family: 'MonumentExtended', sans-serif;
@@ -316,7 +313,7 @@ label.error {
 
 /* 1.5 Animation */
 
-@-webkit-keyframes fadeZooming {
+@-webkit-keyframes fade-zoom {
     from {
         opacity: 0;
         -webkit-transform: scale3d(0.6, 0.6, 0.6);
@@ -330,7 +327,7 @@ label.error {
     }
 }
 
-@keyframes fadeZooming {
+@keyframes fade-zoom {
     from {
         opacity: 0;
         -webkit-transform: scale3d(0.6, 0.6, 0.6);
@@ -344,9 +341,9 @@ label.error {
     }
 }
 
-.fadeZooming {
-    animation-name: fadeZooming;
-    -webkit-animation-name: fadeZooming;
+.fade-zoom {
+    animation-name: fade-zoom;
+    -webkit-animation-name: fade-zoom;
 }
 
 @-webkit-keyframes fade-in-up {
@@ -505,8 +502,8 @@ label.error {
     height: 18px;
     border-radius: 100%;
     background-color: var(--blackish);
-    animation: bouncedelay 1.4s infinite ease-in-out both;
-    -webkit-animation: bouncedelay 1.4s infinite ease-in-out both;
+    animation: bounce-delay 1.4s infinite ease-in-out both;
+    -webkit-animation: bounce-delay 1.4s infinite ease-in-out both;
 }
 
 .preloader__bounce .preloader__bounce-one {
@@ -519,7 +516,7 @@ label.error {
     -webkit-animation-delay: -0.16s;
 }
 
-@-webkit-keyframes bouncedelay {
+@-webkit-keyframes bounce-delay {
     0%,
     80%,
     100% {
@@ -530,7 +527,7 @@ label.error {
     }
 }
 
-@keyframes bouncedelay {
+@keyframes bounce-delay {
     0%,
     80%,
     100% {
@@ -542,7 +539,7 @@ label.error {
 }
 
 #header {
-    padding: 16px 0;
+    padding: 8px 0;
     background-color: var(--black);
 }
 
@@ -564,11 +561,11 @@ label.error {
     font-size: 24px;
     font-weight: bold;
     text-transform: uppercase;
-    color: var(--white);
+    color: var(--accent);
 }
 
 .header__brand:hover {
-    color: var(--white);
+    color: var(--accent);
     text-decoration: none;
 }
 
@@ -713,7 +710,7 @@ label.error {
     z-index: 998;
     background-color: var(--white);
     max-width: 100%;
-    width: 100%;
+    width: 400px;
     padding: 40px 60px;
     display: flex;
     flex-direction: column;
@@ -797,30 +794,25 @@ label.error {
 
 #pp-nav li a {
     display: block;
-    padding: 0.375rem;
 }
 
 #pp-nav span {
     display: block;
     position: static;
-    width: 8px;
-    height: 8px;
-    background: none;
-    opacity: 0.5;
+    width: 2px;
+    height: 16px;
+    background: var(--greyish);
     transition: background-color 0.3s ease-in-out;
-}
-
-#pp-nav a:hover span {
-    opacity: 1;
+    border-radius: 0;
+    border: 0;
 }
 
 #pp-nav li .active span {
     background-color: var(--black);
-    opacity: 1;
 }
 
 .pp-tooltip {
-    color: var(--grey);
+    color: var(--black);
 }
 
 @media (min-width: 1600px) {
@@ -852,7 +844,7 @@ label.error {
     position: relative;
 }
 
-.section-container > .container {
+.section-container .container {
     position: relative;
     z-index: 200;
 }
@@ -876,30 +868,24 @@ label.error {
     letter-spacing: 0.025em;
 }
 
-.section__descr {
+.section__desc {
+    margin-right: 28%;
     color: var(--blackish);
     line-height: 1.5;
-}
-
-.text-white .section__descr {
-    color: #ffffff;
-}
-
-.section__desc-intro {
-    margin-right: 28%;
 }
 
 .about-section__download-btn {
     margin: 52px 0;
     padding: 16px 48px;
     text-transform: uppercase;
-    background-color: var(--black);
-    color: var(--white);
-    border: none;
+    background-color: var(--white);
+    color: var(--black);
+    border: 1px solid var(--black);
+    font-weight: bold;
 }
 
 .about-section__download-btn:hover {
-    color: var(--black);
+    color: var(--white);
     transition: ease-in-out 0.3s;
 }
 
@@ -909,7 +895,7 @@ label.error {
     top: 0;
     bottom: 0;
     left: 0;
-    background-color: var(--accent);
+    background-color: var(--black);
     width: 0;
     font-weight: bold;
     z-index: -1;
@@ -929,9 +915,13 @@ label.error {
         left: 0;
         right: 0;
         width: 100%;
+        background-color: var(--black);
+        color: var(--white);
+        border: none;
     }
 
-    .section__number {
+    .section__number,
+    .about-section__download-btn::before {
         display: none;
     }
 }
@@ -945,43 +935,23 @@ label.error {
     animation-fill-mode: both;
 }
 
-.section.active .delay1 {
-    animation-delay: 0.1s;
-}
-
-.section.active .delay2 {
+.animation-delay-1 {
     animation-delay: 0.2s;
 }
 
-.section.active .delay3 {
-    animation-delay: 0.3s;
+.animation-delay-2 {
+    animation-delay: 0.2s;
 }
 
-.section.active .delay4 {
-    animation-delay: 0.4s;
-}
-
-.section.active .delay5 {
-    animation-delay: 0.5s;
-}
-
-.section.active .delay6 {
+.animation-delay-3 {
     animation-delay: 0.6s;
 }
 
-.section.active .delay7 {
-    animation-delay: 0.7s;
-}
-
-.section.active .delay8 {
+.animation-delay-4 {
     animation-delay: 0.8s;
 }
 
-.section.active .delay9 {
-    animation-delay: 0.9s;
-}
-
-.section.active .delay10 {
+.animation-delay-5 {
     animation-delay: 1s;
 }
 
@@ -991,15 +961,15 @@ label.error {
 }
 
 .polygon-dark {
-    background-color: #888;
+    background-color: #ccc;
 }
 
 .polygon-medium {
-    background-color: #aaa;
+    background-color: #ddd;
 }
 
 .polygon-light {
-    background-color: #ccc;
+    background-color: #eee;
 }
 
 .bg-center-cover {
@@ -1028,7 +998,7 @@ label.error {
 }
 
 .contact-section {
-    background-image: url('../img/bg-projects.jpg');
+    background-image: url('../img/bg-contact.jpg');
 }
 
 .section__bg {
@@ -1057,9 +1027,8 @@ label.error {
 
 #about-section__potrait {
     background-image: url('../img/bg-personal-intro-man.png');
-    background-position: 55% 0;
-    transform: scaleX(1);
-    filter: brightness(1.2);
+    background-position: 55% -15%;
+    filter: contrast(1.2) brightness(1.2);
 }
 
 #about-section__polygon-1 {
@@ -1069,17 +1038,15 @@ label.error {
     top: 44% !important;
     bottom: auto;
     right: auto;
-    animation: ripple 8s infinite;
 }
 
 #about-section__polygon-2 {
-    width: 1120px;
+    width: 1000px;
     height: 1120px;
-    left: 20% !important;
+    left: 32% !important;
     top: 52% !important;
     bottom: auto;
     right: auto;
-    animation: ripple 12s infinite;
 }
 
 @keyframes ripple {
@@ -1089,6 +1056,12 @@ label.error {
     100% {
         transform: translateY(0);
     }
+}
+
+.ripple {
+    animation-name: ripple;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
 }
 
 #skills-section__polygon-1 {
@@ -1107,38 +1080,6 @@ label.error {
     top: 49.44444444% !important;
     bottom: auto;
     right: auto;
-}
-
-.slide-title-personal-services {
-    margin-bottom: 5.55555556vmin;
-    line-height: 0.93636364;
-}
-
-.skills-section .section__title-info {
-    margin-top: 1.25rem;
-    margin-bottom: 8.33333333vmin;
-}
-
-.service-list {
-    margin-bottom: -1.75rem;
-}
-
-.service-item {
-    margin-bottom: 3.75rem;
-}
-
-.service-item-title {
-    margin-bottom: 0.5625rem;
-}
-
-.service-item-more {
-    margin-top: 1.6875rem;
-}
-
-.section__descr-personal-services {
-    margin-right: 10%;
-    margin-top: 2.375rem;
-    margin-bottom: 2rem;
 }
 
 @media (min-width: 768px) {
@@ -1937,8 +1878,8 @@ a:hover .center-icon i {
     }
 }
 
-@media (min-width: 576px) {
+@media (max-width: 575px) {
     .menu {
-        width: 400px;
+        width: 100%;
     }
 }
