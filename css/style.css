@@ -362,6 +362,10 @@ input:focus {
   7. Custom style
 -------------------------------------------------------------------------------*/
 
+[class^='.row .col-'] {
+    margin-bottom: 30px;
+}
+
 .accent-font {
     font-family: 'MonumentExtended', sans-serif;
 }
@@ -401,22 +405,22 @@ input:focus {
 }
 
 .circle-dark {
-    background-color: #ccc;
+    background-color: #d3d3d3;
 }
 
 .circle-medium {
-    background-color: #ddd;
+    background-color: #eee;
 }
 
 .circle-light {
-    background-color: #eee;
+    background-color: #f3f3f3;
 }
 
 /*-------------------------------------------------------------------------------
   4. Header
 -------------------------------------------------------------------------------*/
 
-header {
+#header {
     padding: 8px 0;
     background-color: var(--black);
     position: fixed;
@@ -426,7 +430,7 @@ header {
     z-index: 997;
 }
 
-header .container-fluid {
+#header .container-fluid {
     color: var(--white);
     transition: color 0.3s ease-in-out;
 }
@@ -436,11 +440,11 @@ header .container-fluid {
     font-size: 24px;
     font-weight: bold;
     text-transform: uppercase;
-    color: var(--accent);
+    color: var(--white);
 }
 
 .header__brand:hover {
-    color: var(--accent);
+    color: var(--white);
     text-decoration: none;
 }
 
@@ -605,7 +609,7 @@ header .container-fluid {
 .menu .menu__footer-social,
 .menu .menu__footer {
     opacity: 0;
-    transform: translateY(48px);
+    transform: translateX(-160px);
     transition: all 0.5s ease-in-out;
 }
 
@@ -613,7 +617,7 @@ header .container-fluid {
 .html__menu-show .menu .menu__footer-social,
 .html__menu-show .menu .menu__footer {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
 }
 
 .menu__footer-copyright {
@@ -684,7 +688,8 @@ header .container-fluid {
 }
 
 .pp-scrollable {
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /*-------------------------------------------------------------------------------
@@ -734,31 +739,43 @@ header .container-fluid {
     min-height: 100%;
     display: flex;
     align-items: center;
-    padding: 80px 0;
-    position: relative;
+    padding-top: 100px;
+    padding-bottom: 20px;
 }
 
 .section-container .container {
     position: relative;
-    z-index: 200;
+    z-index: 990;
 }
 
 .section__title {
-    margin: 28px 0;
+    margin-bottom: 28px;
     font-size: 8vmin;
     font-family: 'MonumentExtended', sans-serif;
     line-height: 1;
-    color: var(--blackish);
+    color: var(--accent);
     text-transform: uppercase;
 }
 
 .section__sub-title {
-    margin: 44px 0;
+    margin: 32px 0;
     font-size: 5vmin;
     font-family: 'MonumentExtended', sans-serif;
     line-height: 1.5;
     color: var(--grey);
     text-transform: uppercase;
+}
+
+.section__sub-title b {
+    color: var(--black);
+}
+
+.section__sub-title.float-right {
+    text-align: right;
+    text-transform: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 4vmin;
+    margin: 0;
 }
 
 .section__desc {
@@ -768,7 +785,7 @@ header .container-fluid {
 }
 
 .about-section__download-btn {
-    margin: 52px 0;
+    margin-top: 52px;
     padding: 16px 48px;
     text-transform: uppercase;
     background-color: var(--white);
@@ -799,13 +816,40 @@ header .container-fluid {
     width: 100%;
 }
 
-.section__number {
+.skills-section__card {
+    display: flex;
+    flex-direction: column;
+    padding: 28px;
+    background-color: var(--blackish);
+    height: 100%;
+    position: relative;
+}
+
+.skill-card__title {
+    margin-bottom: 32px;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: var(--whitish);
+}
+
+.skills-section__icon {
+    color: var(--white);
     position: absolute;
-    bottom: 12px;
-    right: 12px;
+    bottom: 5%;
+    right: 5%;
+    line-height: 1;
+    font-size: 800%;
+    opacity: 0.05;
+}
+
+.skill-card__desc {
+    font-size: 16px;
+    color: var(--white);
+}
+
+.section__number {
     z-index: 995;
-    font-size: 18px;
-    color: var(--blackish);
+    color: var(--whitish);
 }
 
 .section:not(.active) .animate-element {
@@ -818,6 +862,7 @@ header .container-fluid {
 }
 
 .about-section {
+    padding-bottom: 80px;
     background-color: var(--white);
 }
 
@@ -874,7 +919,7 @@ header .container-fluid {
 #about-section__circle-1 {
     width: 160px;
     height: 160px;
-    left: -80px !important;
+    left: -6% !important;
     top: 44% !important;
     bottom: auto;
     right: auto;
@@ -882,9 +927,18 @@ header .container-fluid {
 
 #about-section__circle-2 {
     width: 1000px;
-    height: 1120px;
+    height: 1000px;
     left: 32% !important;
     top: 52% !important;
+    bottom: auto;
+    right: auto;
+}
+
+#about-section__circle-3 {
+    width: 600px;
+    height: 600px;
+    left: 70% !important;
+    top: -55% !important;
     bottom: auto;
     right: auto;
 }
@@ -892,17 +946,17 @@ header .container-fluid {
 #skills-section__circle-1 {
     width: 132px;
     height: 132px;
-    right: -64 !important;
-    top: 19% !important;
+    right: -64px !important;
+    top: 80% !important;
     bottom: auto;
     left: auto !important;
 }
 
 #skills-section__circle-2 {
-    width: 880px;
-    height: 880px;
-    left: -8% !important;
-    top: 50% !important;
+    width: 600px;
+    height: 600px;
+    left: 20% !important;
+    top: 0 !important;
     bottom: auto;
     right: auto;
 }
@@ -1020,7 +1074,6 @@ header .container-fluid {
         border: none;
     }
 
-    .section__number,
     .about-section__download-btn::before {
         display: none;
     }
@@ -1029,6 +1082,12 @@ header .container-fluid {
 @media (min-width: 768px) and (max-width: 1023px) {
     html {
         font-size: 17px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .skills-section__card {
+        padding: 12px;
     }
 }
 
@@ -1044,10 +1103,6 @@ header .container-fluid {
 }
 
 @media (min-width: 1600px) {
-    .container-fluid {
-        padding: 68px;
-    }
-
     #pp-nav.right {
         right: 56px;
     }
