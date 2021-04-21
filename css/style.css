@@ -21,7 +21,7 @@
     --whitish: #ccc;
     --grey: #777;
     --greyish: #999;
-    --accent: #f2cc0c;
+    --accent: #f5da55;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
@@ -684,7 +684,7 @@ input:focus {
 }
 
 .pp-tooltip {
-    color: var(--black);
+    color: var(--grey);
 }
 
 .pp-scrollable {
@@ -745,7 +745,7 @@ input:focus {
 
 .section-container .container {
     position: relative;
-    z-index: 990;
+    z-index: 994;
 }
 
 .section__title {
@@ -764,10 +764,6 @@ input:focus {
     line-height: 1.5;
     color: var(--grey);
     text-transform: uppercase;
-}
-
-.section__sub-title b {
-    color: var(--black);
 }
 
 .section__sub-title.float-right {
@@ -790,8 +786,7 @@ input:focus {
     text-transform: uppercase;
     background-color: var(--white);
     color: var(--black);
-    border: 2px solid var(--black);
-    font-weight: bold;
+    border: 1px solid var(--black);
 }
 
 .about-section__download-btn:hover {
@@ -833,13 +828,13 @@ input:focus {
 }
 
 .skills-section__icon {
-    color: var(--white);
+    color: var(--accent);
     position: absolute;
     bottom: 5%;
     right: 5%;
     line-height: 1;
     font-size: 800%;
-    opacity: 0.05;
+    opacity: 0.1;
 }
 
 .skill-card__desc {
@@ -892,7 +887,7 @@ input:focus {
     right: 0;
     top: 0;
     bottom: 0;
-    z-index: 10;
+    z-index: 990;
     overflow: hidden;
     background-size: cover;
     background-position: 50% 50%;
@@ -1026,7 +1021,7 @@ input:focus {
 -------------------------------------------------------------------------------*/
 
 .footer__copyright {
-    color: var(--black);
+    color: var(--grey);
     font-weight: bold;
     font-size: 10px;
     text-transform: uppercase;
