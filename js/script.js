@@ -59,6 +59,9 @@
                     'Contact',
                 ],
             },
+            afterLoad: function () {
+                $('header').removeClass('on-scroll');
+            },
         });
     }
 })($);

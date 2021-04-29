@@ -419,6 +419,7 @@ header {
     left: 0;
     width: 100%;
     z-index: 997;
+    transition: ease-in-out 0.4s;
 }
 
 header.on-scroll {
@@ -427,7 +428,6 @@ header.on-scroll {
 
 header .container-fluid {
     color: var(--black);
-    transition: color 0.3s ease-in-out;
 }
 
 .header__brand {
