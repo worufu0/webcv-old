@@ -16,8 +16,8 @@
 :root {
     --black: #242424;
     --white: #fff;
-    --grey: #878787;
-    --accent: #ffa64d;
+    --grey: #767676;
+    --accent: #f9f055;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
@@ -410,19 +410,16 @@ input:focus {
     border-radius: 50%;
 }
 
-.circle-purple {
+.circle-dark {
     background-color: rgba(0, 0, 0, 0.15);
-    background-color: #e0afff;
 }
 
-.circle-green {
+.circle-medium {
     background-color: rgba(0, 0, 0, 0.1);
-    background-color: #d6ff90;
 }
 
-.circle-orange {
+.circle-light {
     background-color: rgba(0, 0, 0, 0.05);
-    background-color: #ffd3a6;
 }
 
 /*-------------------------------------------------------------------------------
@@ -775,10 +772,6 @@ input:focus {
     text-transform: uppercase;
 }
 
-.section__sub-title b {
-    color: var(--accent);
-}
-
 .section__sub-title.float-right {
     text-align: right;
     text-transform: none;
@@ -828,54 +821,31 @@ input:focus {
     display: flex;
     flex-direction: column;
     padding: 28px;
+    background-color: var(--black);
     height: 100%;
     position: relative;
-    border: 1px solid var(--black);
-    transition: ease 0.6s;
-}
-
-.skills-section__card:hover,
-.skills-section__card:hover .skill-card__title {
-    transition: ease 0.4s;
-}
-
-.skills-section__card:hover {
-    background-color: var(--black);
-}
-
-.skills-section__card:hover .skill-card__title {
-    color: var(--white);
 }
 
 .skill-card__title {
     margin-bottom: 32px;
     text-transform: uppercase;
     font-size: 20px;
-    color: var(--black);
-}
-
-.skill-card__title {
-    margin-bottom: 32px;
-    text-transform: uppercase;
-    font-size: 20px;
-    color: var(--black);
+    color: var(--grey);
 }
 
 .skills-section__icon {
+    color: var(--accent);
     position: absolute;
     bottom: 5%;
     right: 5%;
     line-height: 1;
     font-size: 800%;
-    opacity: 0.15;
-    color: transparent;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: var(--grey);
+    opacity: 0.1;
 }
 
 .skill-card__desc {
     font-size: 16px;
-    color: var(--grey);
+    color: var(--white);
 }
 
 .section__number {
