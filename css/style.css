@@ -15,6 +15,7 @@
 -------------------------------------------------------------------------------*/
 :root {
     --black: #242424;
+    --blackish: #333;
     --white: #fff;
     --grey: #878787;
     --accent: #ffa64d;
@@ -394,18 +395,15 @@ input:focus {
 }
 
 .circle-purple {
-    background-color: rgba(0, 0, 0, 0.15);
-    background-color: #e0afff;
+    background-color: rgba(227, 175, 255, 0.8);
 }
 
 .circle-green {
-    background-color: rgba(0, 0, 0, 0.1);
-    background-color: #d6ff90;
+    background-color: rgba(214, 255, 144, 0.8);
 }
 
 .circle-orange {
-    background-color: rgba(0, 0, 0, 0.05);
-    background-color: #ffd3a6;
+    background-color: rgba(255, 211, 166, 0.8);
 }
 
 /*-------------------------------------------------------------------------------
@@ -666,12 +664,12 @@ header .container-fluid {
 #pp-nav span {
     display: block;
     position: static;
-    width: 2px;
-    height: 16px;
-    background: var(--grey);
+    width: 4px;
+    height: 20px;
+    background: none;
     transition: background-color 0.3s ease-in-out;
     border-radius: 0;
-    border: 0;
+    border: 1px solid var(--black);
 }
 
 #pp-nav li .active span {
@@ -752,24 +750,29 @@ header .container-fluid {
     text-transform: uppercase;
 }
 
+.section__title span {
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--accent);
+}
+
 .section__sub-title {
     margin: 32px 0;
     font-size: 4.8vmin;
     font-family: 'Krona One', sans-serif;
     line-height: 1.5;
-    color: var(--black);
+    color: var(--blackish);
     text-transform: uppercase;
 }
 
-.section__sub-title b {
+.section__sub-title span {
     color: var(--accent);
 }
 
 .section__sub-title.float-right {
     text-align: right;
     text-transform: none;
-    font-family: 'Noto Sans', sans-serif;
-    font-size: 3.8vmin;
+    font-size: 3vmin;
     margin: 0;
 }
 
@@ -784,8 +787,8 @@ header .container-fluid {
     padding: 16px 48px;
     text-transform: uppercase;
     background-color: var(--white);
-    color: var(--black);
-    border: 1px solid var(--black);
+    color: var(--blackish);
+    border: 1px solid var(--blackish);
 }
 
 .about-section__download-btn:hover {
@@ -816,7 +819,7 @@ header .container-fluid {
     padding: 28px;
     height: 100%;
     position: relative;
-    background-color: var(--black);
+    background-color: var(--blackish);
     border-radius: 4%;
 }
 
@@ -835,7 +838,7 @@ header .container-fluid {
     font-size: 800%;
     opacity: 0.15;
     color: transparent;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: var(--grey);
 }
 
@@ -858,29 +861,32 @@ header .container-fluid {
     animation-fill-mode: both;
 }
 
+.about-section,
+.skills-section,
+.education-section,
+.experience-section,
+.projects-section,
+.contact-section {
+    background-color: var(--white);
+}
+
+.about-section,
+.experience-section {
+    background-image: url('/img/green.webp');
+}
+
+.skills-section,
+.projects-section {
+    background-image: url('/img/orange.webp');
+}
+
+.education-section,
+.contact-section {
+    background-image: url('/img/purple.webp');
+}
+
 .about-section {
     padding-bottom: 80px;
-    background-color: var(--white);
-}
-
-.skills-section {
-    background-color: var(--white);
-}
-
-.education-section {
-    background-color: var(--white);
-}
-
-.experience-section {
-    background-color: var(--white);
-}
-
-.projects-section {
-    background-color: var(--white);
-}
-
-.contact-section {
-    background-image: url('../img/bg-contact.jpg');
 }
 
 .section__bg {
@@ -918,8 +924,8 @@ header .container-fluid {
     height: 160px;
     left: -6% !important;
     top: 44% !important;
-    bottom: auto;
-    right: auto;
+    bottom: auto !important;
+    right: auto !important;
 }
 
 #about-section__circle-2 {
@@ -927,8 +933,8 @@ header .container-fluid {
     height: 1000px;
     left: 32% !important;
     top: 52% !important;
-    bottom: auto;
-    right: auto;
+    bottom: auto !important;
+    right: auto !important;
 }
 
 #about-section__circle-3 {
@@ -936,33 +942,33 @@ header .container-fluid {
     height: 600px;
     left: 70% !important;
     top: -55% !important;
-    bottom: auto;
-    right: auto;
+    bottom: auto !important;
+    right: auto !important;
 }
 
 #skills-section__circle-1 {
     width: 320px;
     height: 320px;
-    right: -64px !important;
-    top: 40% !important;
-    bottom: auto;
+    right: -15% !important;
+    bottom: 10% !important;
+    top: auto !important;
     left: auto !important;
 }
 
 #skills-section__circle-2 {
-    width: 600px;
-    height: 600px;
-    left: -20% !important;
+    width: 480px;
+    height: 480px;
+    left: -15% !important;
     top: -20% !important;
-    bottom: auto;
-    right: auto;
+    bottom: auto !important;
+    right: auto !important;
 }
 
 #experience-section__circle-1 {
     width: 132px;
     height: 132px;
     left: -64px !important;
-    top: 50% !important;
+    top: 60% !important;
     bottom: auto !important;
     right: auto !important;
 }
@@ -976,44 +982,20 @@ header .container-fluid {
     left: auto !important;
 }
 
-#education-section__image-1 {
-    width: 240px;
-    height: 240px;
-    background-image: url('../img/img-code-1.png');
-    background-size: contain;
-    position: absolute;
-    top: 0% !important;
-    right: 3% !important;
-    bottom: auto !important;
-    left: auto !important;
-}
-
-#education-section__image-2 {
-    width: 660px;
-    height: 480px;
-    background-image: url('../img/img-code-2.png');
-    background-size: contain;
-    position: absolute;
-    top: 60% !important;
-    right: 20% !important;
-    bottom: auto !important;
-    left: auto !important;
-}
-
 #education-section__circle-1 {
-    width: 128px;
-    height: 128px;
+    width: 720px;
+    height: 720px;
     left: -64px !important;
-    top: 50% !important;
+    top: 60% !important;
     bottom: auto !important;
     right: auto !important;
 }
 
 #education-section__circle-2 {
-    width: 720px;
-    height: 720px;
-    right: -15% !important;
-    top: 80% !important;
+    width: 128px;
+    height: 128px;
+    right: 10% !important;
+    top: 40% !important;
     bottom: auto !important;
     left: auto !important;
 }
