@@ -835,8 +835,9 @@ input:focus {
 }
 
 .skills-section__card:hover,
-.skills-section__card:hover .skill-card__title {
-    transition: ease 0.4s;
+.skills-section__card:hover .skill-card__title,
+.skills-section__card:hover .skill-card__desc {
+    transition: ease 0.6s;
 }
 
 .skills-section__card:hover {
@@ -844,6 +845,10 @@ input:focus {
 }
 
 .skills-section__card:hover .skill-card__title {
+    color: var(--grey);
+}
+
+.skills-section__card:hover .skill-card__desc {
     color: var(--white);
 }
 
