@@ -21,19 +21,10 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Krona+One&family=Russo+One&display=swap');
 
 @font-face {
     font-family: 'Krona One';
     src: url('../fonts/KronaOne-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'MonumentExtended';
-    src: url('../fonts/monumentextended-regular-webfont.woff2') format('woff2'),
-        url('../fonts/monumentextended-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -268,7 +259,6 @@ input:focus {
     100% {
         top: 6px;
         transform: rotate(45deg);
-        background-color: var(--black);
     }
 }
 
@@ -276,17 +266,14 @@ input:focus {
     0% {
         top: 6px;
         transform: rotate(45deg);
-        background-color: var(--black);
     }
     50% {
         top: 6px;
         transform: rotate(0deg);
-        background-color: var(--black);
     }
     100% {
         top: 0;
         transform: rotate(0deg);
-        background-color: var(--white);
     }
 }
 
@@ -302,7 +289,6 @@ input:focus {
     100% {
         bottom: 6px;
         transform: rotate(135deg);
-        background-color: var(--black);
     }
 }
 
@@ -310,17 +296,14 @@ input:focus {
     0% {
         bottom: 6px;
         transform: rotate(135deg);
-        background-color: var(--black);
     }
     50% {
         bottom: 6px;
         transform: rotate(0);
-        background-color: var(--black);
     }
     100% {
         bottom: 0;
         transform: rotate(0);
-        background-color: var(--white);
     }
 }
 
@@ -428,10 +411,9 @@ input:focus {
 /*-------------------------------------------------------------------------------
   4. Header
 -------------------------------------------------------------------------------*/
-
-#header {
+header {
     padding: 8px 0;
-    background-color: var(--black);
+    background: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -439,8 +421,12 @@ input:focus {
     z-index: 997;
 }
 
-#header .container-fluid {
-    color: var(--white);
+header.on-scroll {
+    background-color: var(--white);
+}
+
+header .container-fluid {
+    color: var(--black);
     transition: color 0.3s ease-in-out;
 }
 
@@ -449,11 +435,11 @@ input:focus {
     font-size: 24px;
     font-weight: bold;
     text-transform: uppercase;
-    color: var(--white);
+    color: var(--black);
 }
 
 .header__brand:hover {
-    color: var(--white);
+    color: var(--black);
     text-decoration: none;
 }
 
@@ -469,7 +455,7 @@ input:focus {
 }
 
 .header__tagline {
-    color: var(--white);
+    color: var(--black);
     font-weight: bold;
     text-transform: uppercase;
     transition: color 0.3s ease-in-out;
@@ -501,7 +487,7 @@ input:focus {
     width: 100%;
     border-radius: 3px;
     height: 3px;
-    background-color: var(--white);
+    background-color: var(--black);
     transition: all 0.3s;
     position: relative;
 }
@@ -830,40 +816,15 @@ input:focus {
     padding: 28px;
     height: 100%;
     position: relative;
-    border: 1px solid var(--black);
-    transition: ease 0.6s;
-}
-
-.skills-section__card:hover,
-.skills-section__card:hover .skill-card__title,
-.skills-section__card:hover .skill-card__desc {
-    transition: ease 0.6s;
-}
-
-.skills-section__card:hover {
     background-color: var(--black);
+    border-radius: 4%;
 }
 
-.skills-section__card:hover .skill-card__title {
+.skill-card__title {
+    margin-bottom: 32px;
+    text-transform: uppercase;
+    font-size: 20px;
     color: var(--grey);
-}
-
-.skills-section__card:hover .skill-card__desc {
-    color: var(--white);
-}
-
-.skill-card__title {
-    margin-bottom: 32px;
-    text-transform: uppercase;
-    font-size: 20px;
-    color: var(--black);
-}
-
-.skill-card__title {
-    margin-bottom: 32px;
-    text-transform: uppercase;
-    font-size: 20px;
-    color: var(--black);
 }
 
 .skills-section__icon {
@@ -880,7 +841,7 @@ input:focus {
 
 .skill-card__desc {
     font-size: 16px;
-    color: var(--grey);
+    color: var(--white);
 }
 
 .section__number {
@@ -980,10 +941,10 @@ input:focus {
 }
 
 #skills-section__circle-1 {
-    width: 132px;
-    height: 132px;
+    width: 320px;
+    height: 320px;
     right: -64px !important;
-    top: 80% !important;
+    top: 40% !important;
     bottom: auto;
     left: auto !important;
 }
@@ -991,8 +952,8 @@ input:focus {
 #skills-section__circle-2 {
     width: 600px;
     height: 600px;
-    left: 20% !important;
-    top: 0 !important;
+    left: -20% !important;
+    top: -20% !important;
     bottom: auto;
     right: auto;
 }

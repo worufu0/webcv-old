@@ -6,6 +6,15 @@
         }
     });
 
+    // Set background for header when scroll
+    $('.section').on('scroll', function () {
+        if ($(this).scrollTop() != 0) {
+            $('header').addClass('on-scroll');
+        } else {
+            $('header').removeClass('on-scroll');
+        }
+    });
+
     // Show/hide menu
     $('.header__hamburger-a').on('click', function () {
         if ($('html').hasClass('html__menu-show')) {
