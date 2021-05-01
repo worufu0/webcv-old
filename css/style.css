@@ -17,7 +17,7 @@
     --black: #242424;
     --blackish: #333;
     --white: #fff;
-    --grey: #878787;
+    --grey: #787878;
     --accent: #ffa64d;
 }
 
@@ -34,7 +34,7 @@
   2. Available tags
 -------------------------------------------------------------------------------*/
 html {
-    font-size: 16px;
+    font-size: 14px;
     cursor: default;
 }
 
@@ -417,7 +417,6 @@ header {
     left: 0;
     width: 100%;
     z-index: 997;
-    transition: ease-in-out 0.4s;
 }
 
 header.on-scroll {
@@ -437,7 +436,6 @@ header .container-fluid {
 }
 
 .header__brand:hover {
-    color: var(--black);
     text-decoration: none;
 }
 
@@ -456,7 +454,6 @@ header .container-fluid {
     color: var(--black);
     font-weight: bold;
     text-transform: uppercase;
-    transition: color 0.3s ease-in-out;
     float: right;
     font-size: 12px;
     text-align: right;
@@ -486,7 +483,6 @@ header .container-fluid {
     border-radius: 3px;
     height: 3px;
     background-color: var(--black);
-    transition: all 0.3s;
     position: relative;
 }
 
@@ -667,9 +663,8 @@ header .container-fluid {
     width: 4px;
     height: 20px;
     background: none;
-    transition: background-color 0.3s ease-in-out;
     border-radius: 0;
-    border: 1px solid var(--black);
+    border: 1px solid var(--black) !important;
 }
 
 #pp-nav li .active span {
@@ -678,6 +673,7 @@ header .container-fluid {
 
 .pp-tooltip {
     color: var(--grey);
+    opacity: 0.6s;
 }
 
 .pp-scrollable {
@@ -802,7 +798,7 @@ header .container-fluid {
     top: 0;
     bottom: 0;
     left: 0;
-    background-color: var(--black);
+    background-color: var(--blackish);
     width: 0;
     font-weight: bold;
     z-index: -1;
@@ -816,7 +812,7 @@ header .container-fluid {
 .skills-section__card {
     display: flex;
     flex-direction: column;
-    padding: 28px;
+    padding: 16px;
     height: 100%;
     position: relative;
     background-color: var(--blackish);
@@ -824,7 +820,7 @@ header .container-fluid {
 }
 
 .skill-card__title {
-    margin-bottom: 32px;
+    margin-bottom: 20px;
     text-transform: uppercase;
     font-size: 20px;
     color: var(--grey);
@@ -843,13 +839,13 @@ header .container-fluid {
 }
 
 .skill-card__desc {
-    font-size: 16px;
     color: var(--white);
 }
 
 .section__number {
     z-index: 995;
     color: var(--grey);
+    opacity: 0.6;
 }
 
 .section:not(.active) .animate-element {
@@ -902,6 +898,25 @@ header .container-fluid {
     background-repeat: no-repeat;
 }
 
+.section__bg.bg-project-1 {
+    background-image: linear-gradient(
+        to right bottom,
+        #ff4500,
+        #ff6300,
+        #ff7b00,
+        #ff9100,
+        #ffa500
+    );
+}
+
+.section__bg.bg-project-2 {
+    background-color: #333;
+}
+
+.section__bg.bg-project-3 {
+    background-color: #0288d1;
+}
+
 .bg-image {
     position: absolute !important;
     left: 0;
@@ -914,7 +929,7 @@ header .container-fluid {
 }
 
 #about-section__potrait {
-    background-image: url('../img/bg-personal-intro-man.png');
+    background-image: url('../img/potrait.webp');
     background-position: 55% -15%;
     filter: contrast(1.2) brightness(1.2);
 }
@@ -1000,6 +1015,135 @@ header .container-fluid {
     left: auto !important;
 }
 
+#projects-section-1__image-1 {
+    background-image: url('../img/food-recipes-1.webp');
+    background-size: contain;
+    width: 40%;
+    position: absolute;
+    top: 0;
+    left: 55%;
+}
+
+#projects-section-1__image-2 {
+    background-image: url('../img/food-recipes-2.webp');
+    background-size: contain;
+    width: 25%;
+    position: absolute;
+    bottom: -100%;
+    left: 30%;
+}
+
+#projects-section-1__image-3 {
+    background-image: url('../img/food-recipes-3.webp');
+    background-size: contain;
+    width: 15%;
+    position: absolute;
+    top: -100%;
+    left: 15%;
+}
+
+#projects-section-2__image {
+    width: 450px;
+    height: 250px;
+    position: absolute;
+    left: 52%;
+    top: 50%;
+    transform: translateY(-50%) rotate(15deg) skew(-25deg);
+}
+
+.projects-section-2__image-layer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 20px 20px 80px #000;
+}
+
+.projects-section-2__image-layer:nth-child(1) {
+    background-image: url('../img/SplashScreenBackground.png');
+    transform: translate(48px, 48px) scale(1.1);
+    opacity: 0.2;
+}
+
+.projects-section-2__image-layer:nth-child(2) {
+    background-image: url('../img/SplashScreenBackground.png');
+    opacity: 0.6;
+}
+
+.projects-section-2__image-layer:nth-child(3) {
+    background-image: url('../img/SplashScreenBackground.png');
+    transform: translate(-48px, -48px) scale(0.9);
+}
+
+#projects-section-3__image-1 {
+    background-image: url('../img/SplashScreenBackground1.png');
+    background-size: contain;
+    position: absolute;
+    left: -100%;
+    bottom: -50%;
+    transform: rotate(15deg) scale(0.5);
+    opacity: 0.1;
+}
+
+#projects-section-3__image-2 {
+    position: absolute;
+    width: 600px;
+    height: 480px;
+    left: 50%;
+    top: 55%;
+    transform: translateY(-50%);
+}
+
+.projects-section-3__image-2-part {
+    position: absolute;
+    background-size: 100% 100%;
+    background-position: center;
+    box-shadow: 20px 20px 80px #000;
+}
+
+.projects-section-3__image-2-part:nth-child(1) {
+    background-image: url('../img/4.png');
+    width: 200px;
+    height: 240px;
+    top: 0;
+    left: 0%;
+}
+
+.projects-section-3__image-2-part:nth-child(2) {
+    background-image: url('../img/5.png');
+    width: 180px;
+    height: 100px;
+    top: 5%;
+    right: 5%;
+}
+
+.projects-section-3__image-2-part:nth-child(3) {
+    background-image: url('../img/1.png');
+    width: 270px;
+    height: 150px;
+    bottom: 0;
+    left: 5%;
+}
+
+.projects-section-3__image-2-part:nth-child(4) {
+    background-image: url('../img/2.png');
+    width: 450px;
+    height: 250px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.projects-section-3__image-2-part:nth-child(5) {
+    background-image: url('../img/3.png');
+    width: 180px;
+    height: 240px;
+    bottom: -5%;
+    right: 0;
+}
+
 /*-------------------------------------------------------------------------------
   6. Footer
 -------------------------------------------------------------------------------*/
@@ -1009,11 +1153,38 @@ header .container-fluid {
     font-weight: bold;
     font-size: 10px;
     text-transform: uppercase;
-    transition: all 0.3s ease-in-out;
     position: fixed;
     left: 12px;
     bottom: 12px;
     z-index: 996;
+    opacity: 0.6;
+}
+
+/*-------------------------------------------------------------------------------
+  Owl carousel
+-------------------------------------------------------------------------------*/
+.owl-carousel .section-container {
+    height: 100vh;
+}
+
+.owl-nav {
+    font-size: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.owl-nav button {
+    opacity: 0.5;
+}
+
+.owl-nav button:hover {
+    opacity: 1;
+    transition: ease-in-out 0.4s;
 }
 
 /*-------------------------------------------------------------------------------
@@ -1037,7 +1208,7 @@ header .container-fluid {
 
 @media (max-width: 767px) {
     html {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .about-section__download-btn {
@@ -1060,7 +1231,7 @@ header .container-fluid {
 
 @media (min-width: 768px) and (max-width: 1023px) {
     html {
-        font-size: 17px;
+        font-size: 15px;
     }
 }
 
@@ -1072,7 +1243,7 @@ header .container-fluid {
 
 @media (min-width: 1024px) {
     html {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 @media (min-width: 1200px) {
