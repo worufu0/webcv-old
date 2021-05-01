@@ -34,7 +34,7 @@
   2. Available tags
 -------------------------------------------------------------------------------*/
 html {
-    font-size: 14px;
+    font-size: 16px;
     cursor: default;
 }
 
@@ -728,8 +728,13 @@ header .container-fluid {
     min-height: 100%;
     display: flex;
     align-items: center;
-    padding-top: 80px;
-    padding-bottom: 20px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.projects-section .section-container {
+    align-items: flex-start;
+    padding-top: 120px;
 }
 
 .section-container .container {
@@ -761,6 +766,31 @@ header .container-fluid {
     text-transform: uppercase;
 }
 
+.section__sub-title {
+    margin: 32px 0;
+    font-size: 4.8vmin;
+    font-family: 'Krona One', sans-serif;
+    line-height: 1.5;
+    color: var(--blackish);
+    text-transform: uppercase;
+}
+
+.project-1 .section__sub-title {
+    color: #7cfc00;
+}
+
+.project-2 .section__sub-title {
+    color: #f4c51f;
+}
+
+.project-3 .section__sub-title {
+    color: #444345;
+}
+
+.project-4 .section__sub-title {
+    color: #c2080f;
+}
+
 .section__sub-title span {
     color: var(--accent);
 }
@@ -773,13 +803,31 @@ header .container-fluid {
 }
 
 .section__desc {
-    margin-right: 28%;
+    margin-bottom: 52px;
     color: var(--grey);
     line-height: 1.5;
 }
 
+.section__desc,
+.section__keywords {
+    margin-right: 28%;
+}
+
+.section__keywords {
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.section__keywords div {
+    display: inline-block;
+    background-color: #fff;
+    padding: 4px;
+    margin: 4px 0;
+    border-radius: 4px;
+}
+
 .about-section__download-btn {
-    margin-top: 52px;
     padding: 16px 48px;
     text-transform: uppercase;
     background-color: var(--white);
@@ -840,6 +888,26 @@ header .container-fluid {
 
 .skill-card__desc {
     color: var(--white);
+}
+
+.project-section__btn {
+    background: none;
+    color: #fff;
+    text-transform: capitalize;
+    text-decoration: underline;
+    border: none;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0;
+    margin: 0 8px;
+}
+
+.project-section__btn:nth-child(1) {
+    margin-left: 0;
+}
+.project-section__btn:nth-last-child(1) {
+    margin-right: 0;
 }
 
 .section__number {
@@ -1068,21 +1136,19 @@ header .container-fluid {
     background-repeat: no-repeat;
     box-shadow: 20px 20px 80px #000;
     backface-visibility: hidden;
+    background-image: url('../img/SplashScreenBackground.png');
 }
 
 .projects-section-2__image-layer:nth-child(1) {
-    background-image: url('../img/SplashScreenBackground.png');
     transform: translate(48px, 48px) scale(1.1);
     opacity: 0.2;
 }
 
 .projects-section-2__image-layer:nth-child(2) {
-    background-image: url('../img/SplashScreenBackground.png');
     opacity: 0.6;
 }
 
 .projects-section-2__image-layer:nth-child(3) {
-    background-image: url('../img/SplashScreenBackground.png');
     transform: translate(-48px, -48px) scale(0.9);
 }
 
@@ -1238,11 +1304,19 @@ header .container-fluid {
     .about-section__download-btn::before {
         display: none;
     }
+
+    .section__keywords {
+        font-size: 12px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
     html {
         font-size: 15px;
+    }
+
+    .section__keywords {
+        font-size: 13px;
     }
 }
 
@@ -1250,13 +1324,12 @@ header .container-fluid {
     .skills-section__card {
         padding: 12px;
     }
-}
 
-@media (min-width: 1024px) {
-    html {
-        font-size: 16px;
+    .projects-section .section-container {
+        padding-top: 80px;
     }
 }
+
 @media (min-width: 1200px) {
     .container {
         max-width: 1200px;
