@@ -6,6 +6,15 @@
         }
     });
 
+    // Header on scroll
+    $('.section').on('scroll', function () {
+        if ($(this).scrollTop() != 0) {
+            $('header').addClass('on-scroll');
+        } else {
+            $('header').removeClass('on-scroll');
+        }
+    });
+
     // Show/hide menu
     $('.header__hamburger-a').on('click', function () {
         if ($('html').hasClass('html__menu-show')) {
@@ -65,16 +74,21 @@
                     root.style.setProperty('--accent', '#ffa64d');
                     root.style.setProperty('--white', '#fff');
                 }
+                $('header').removeClass('on-scroll');
             },
         });
     }
 
+    // Owl carousel
     $(document).ready(function () {
         $('.owl-carousel').owlCarousel({
             items: 1,
             dots: false,
             nav: true,
             loop: true,
+            mouseDrag: false,
+            touchDrag: false,
+            margin: 3,
         });
     });
 })($);

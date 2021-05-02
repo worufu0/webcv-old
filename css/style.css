@@ -421,6 +421,8 @@ header {
 
 header.on-scroll {
     background-color: var(--white);
+    animation: fadeInDown;
+    animation-duration: 0.4s;
 }
 
 header .container-fluid {
@@ -487,7 +489,7 @@ header .container-fluid {
 }
 
 .header__hamburger .stick + .stick {
-    margin-top: 9px;
+    margin-top: 8px;
 }
 
 .header__hamburger #stick-1 {
@@ -559,7 +561,7 @@ header .container-fluid {
 
 .menu-main .active a,
 .menu-main a:hover {
-    color: var(--accent);
+    color: #ffa64d;
 }
 
 .menu-overlay {
@@ -728,13 +730,11 @@ header .container-fluid {
     min-height: 100%;
     display: flex;
     align-items: center;
-    padding-top: 60px;
-    padding-bottom: 60px;
 }
 
-.projects-section .section-container {
-    align-items: flex-start;
-    padding-top: 120px;
+.about-section .section-container,
+.skills-section .section-container {
+    padding-top: 60px;
 }
 
 .section-container .container {
@@ -990,7 +990,7 @@ header .container-fluid {
 }
 
 .section__bg.bg-project-5 {
-    background-color: #0288d1;
+    background-color: #c2080f;
 }
 
 .bg-image {
@@ -1244,6 +1244,10 @@ header .container-fluid {
     height: 100vh;
 }
 
+.owl-carousel .owl-stage {
+    display: flex;
+}
+
 .owl-nav {
     font-size: 60px;
     display: flex;
@@ -1263,7 +1267,6 @@ header .container-fluid {
     opacity: 1;
     transition: ease-in-out 0.4s;
 }
-
 /*-------------------------------------------------------------------------------
   9. Responsive
 -------------------------------------------------------------------------------*/
@@ -1288,6 +1291,10 @@ header .container-fluid {
         font-size: 14px;
     }
 
+    .section__desc {
+        margin-bottom: 32px;
+    }
+
     .about-section__download-btn {
         position: fixed;
         padding: 12px 0;
@@ -1308,6 +1315,16 @@ header .container-fluid {
     .section__keywords {
         font-size: 12px;
     }
+
+    .projects-section .section-container {
+        padding-bottom: 28px;
+    }
+
+    .owl-nav {
+        padding: 0 16px;
+        top: 100%;
+        transform: translateY(-100%);
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -1323,10 +1340,6 @@ header .container-fluid {
 @media (max-width: 1023px) {
     .skills-section__card {
         padding: 12px;
-    }
-
-    .projects-section .section-container {
-        padding-top: 80px;
     }
 }
 
