@@ -16,7 +16,7 @@
     });
 
     // Show/hide menu
-    $('.header__hamburger-a').on('click', function () {
+    $('.menu-clickable').on('click', function () {
         if ($('html').hasClass('html__menu-show')) {
             $('html').removeClass('html__menu-show');
         } else {
@@ -25,7 +25,7 @@
     });
 
     // Hide menu after click nav
-    $('.menu-main__item').on('click', function () {
+    $('.menu__main__item').on('click', function () {
         if ($('html').hasClass('html__menu-show')) {
             $('html').removeClass('html__menu-show');
         } else {
@@ -37,7 +37,7 @@
     if ($('#pagepiling').length) {
         $('#pagepiling').pagepiling({
             scrollingSpeed: 280,
-            menu: '#menu, #menu-main',
+            menu: '#menu, #menu__main',
             anchors: [
                 'About',
                 'Skills',
