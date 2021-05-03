@@ -36,7 +36,7 @@
     // Pagepiling
     if ($('#pagepiling').length) {
         $('#pagepiling').pagepiling({
-            scrollingSpeed: 280,
+            scrollingSpeed: 250,
             menu: '#menu, #menu-main',
             anchors: [
                 'about',
@@ -86,9 +86,10 @@
             dots: false,
             nav: true,
             loop: true,
-            lazyLoad: true,
             mouseDrag: false,
             touchDrag: false,
+            animateIn: 'fadeIn',
+            animateOut: 'fadeOut',
         });
     });
 })($);

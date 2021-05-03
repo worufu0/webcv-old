@@ -9,11 +9,11 @@
     --accent: #ffa64d;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap);
 
 @font-face {
     font-family: 'Krona One';
-    src: url('../fonts/KronaOne-Regular.ttf') format('truetype');
+    src: url(../fonts/KronaOne-Regular.ttf) format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -385,17 +385,17 @@ header.on-scroll {
 
 .about-section,
 .experience-section {
-    background-image: url('../img/green.webp');
+    background-image: url(../img/green.webp);
 }
 
 .skills-section,
 .projects-section {
-    background-image: url('../img/orange.webp');
+    background-image: url(../img/orange.webp);
 }
 
 .education-section,
 .contact-section {
-    background-image: url('../img/purple.webp');
+    background-image: url(../img/purple.webp);
 }
 
 .section__bg {
@@ -515,7 +515,7 @@ header.on-scroll {
 }
 
 .about-section__potrait {
-    background-image: url('../img/potrait.webp');
+    background-image: url(../img/potrait.webp);
     background-position: 55% -15%;
     filter: contrast(1.2) brightness(1.2);
 }
@@ -742,21 +742,21 @@ header.on-scroll {
 }
 
 .project-1__image-1 {
-    background-image: url('../img/food-recipes-1.webp');
+    background-image: url(../img/food-recipes-1.webp);
     width: 40%;
     top: 0;
     left: 55%;
 }
 
 .project-1__image-2 {
-    background-image: url('../img/food-recipes-2.webp');
+    background-image: url(../img/food-recipes-2.webp);
     width: 25%;
     bottom: -100%;
     left: 30%;
 }
 
 .project-1__image-3 {
-    background-image: url('../img/food-recipes-3.webp');
+    background-image: url(../img/food-recipes-3.webp);
     width: 15%;
     top: -100%;
     left: 15%;
@@ -789,7 +789,7 @@ header.on-scroll {
     background-repeat: no-repeat;
     box-shadow: 20px 20px 80px #000;
     backface-visibility: hidden;
-    background-image: url('../img/SplashScreenBackground.png');
+    background-image: url(../img/we-split.webp);
     animation: zoomIn ease-in-out 0.5s both;
 }
 
@@ -816,7 +816,7 @@ header.on-scroll {
 }
 
 .project-3__image-1 {
-    background-image: url('../img/SplashScreenBackground1.png');
+    background-image: url(../cake-shop-1/we-split.webp);
     background-size: contain;
     position: absolute;
     left: -100%;
@@ -844,7 +844,7 @@ header.on-scroll {
 }
 
 .project-3__image-2 div:nth-child(1) {
-    background-image: url('../img/5.png');
+    background-image: url(../img/5.png);
     width: 320px;
     height: 180px;
     bottom: 0;
@@ -853,7 +853,7 @@ header.on-scroll {
 }
 
 .project-3__image-2 div:nth-child(2) {
-    background-image: url('../img/1.png');
+    background-image: url(../img/1.png);
     width: 312px;
     height: 202px;
     top: 0;
@@ -862,7 +862,7 @@ header.on-scroll {
 }
 
 .project-3__image-2 div:nth-child(3) {
-    background-image: url('../img/3.png');
+    background-image: url(../img/3.png);
     width: 210px;
     height: 280px;
     top: 0;
@@ -871,7 +871,7 @@ header.on-scroll {
 }
 
 .project-3__image-2 div:nth-child(4) {
-    background-image: url('../img/4.png');
+    background-image: url(../img/4.png);
     width: 200px;
     height: 250px;
     bottom: 0;
@@ -885,7 +885,7 @@ header.on-scroll {
 }
 
 .project-4 .section__bg {
-    background-image: url('../img/noise.png');
+    background-image: url(../img/noise-bg.webp);
 }
 
 .project-4 .section__bg div {
@@ -894,27 +894,29 @@ header.on-scroll {
 }
 
 .project-4__image-1 {
-    background-image: url('../img/shoes.png');
+    background-image: url(../img/notoli-shoes-1.webp);
     width: 50%;
     left: 45%;
     animation: swing ease-in-out 0.5s both;
 }
 
+.project-4__image-2,
+.project-4__image-3 {
+    background-image: url(../img/notoli-shoes-2.webp);
+    filter: blur(2px) brightness(0.7);
+}
+
 .project-4__image-2 {
-    background-image: url('../img/shoeslace-2.png');
     width: 30%;
     left: 40%;
     top: -85%;
-    filter: blur(2px) brightness(0.7);
     transform: rotate(180deg);
 }
 
 .project-4__image-3 {
-    background-image: url('../img/shoeslace-2.png');
     width: 30%;
     left: 10%;
     bottom: -85%;
-    filter: blur(2px) brightness(0.7);
 }
 
 /*-------------------- Project 5 --------------------*/
@@ -934,7 +936,7 @@ header.on-scroll {
 }
 
 .project-5__image-1 {
-    background-image: url('../img/clock.jpg');
+    background-image: url(../img/notoli-watch-1.webp);
     position: absolute;
     height: 100%;
     width: 100%;
@@ -942,32 +944,16 @@ header.on-scroll {
 }
 
 .project-5__image-2 {
-    background-image: url(../img/w1.webp);
+    background-image: url(../img/notoli-watch-2.webp);
     width: 25%;
     height: 100%;
-    top: 0;
-    left: 50%;
+    top: -20%;
+    left: 40%;
     transform: rotate(20deg);
 }
 
 .project-5__image-3 {
-    background-image: url(../img/w4.png);
-    width: 15%;
-    top: -90%;
-    left: 10%;
-    transform: rotate(-20deg);
-}
-
-.project-5__image-4 {
-    background-image: url(../img/w5.png);
-    width: 15%;
-    top: 70%;
-    left: 95%;
-    transform: rotate(-60deg);
-}
-
-.project-5__image-5 {
-    background-image: url(../img/w2.png);
+    background-image: url(../img/notoli-watch-3.webp);
     width: 15%;
     height: 100%;
     top: 50%;
@@ -975,19 +961,36 @@ header.on-scroll {
     transform: rotate(60deg);
 }
 
-.project-5__image-6 {
-    background-image: url(../img/w3.png);
+.project-5__image-4 {
+    background-image: url(../img/notoli-watch-4.webp);
     width: 15%;
     top: -80%;
     left: 80%;
     transform: rotate(-40deg);
 }
 
-.project-5__image-7 {
-    background-image: url(../img/w6.png);
+.project-5__image-5 {
+    background-image: url(../img/notoli-watch-5.webp);
     width: 15%;
-    top: 10%;
-    left: -10%;
+    top: -90%;
+    left: 10%;
+    transform: rotate(-20deg);
+}
+
+.project-5__image-6 {
+    background-image: url(../img/notoli-watch-6.webp);
+    width: 15%;
+    top: 70%;
+    left: 95%;
+    transform: rotate(-60deg);
+}
+
+.project-5__image-7 {
+    background-image: url(../img/notoli-watch-7.webp);
+    width: 12%;
+    height: 100%;
+    top: 15%;
+    left: 70%;
     transform: rotate(-90deg);
 }
 
@@ -1384,13 +1387,18 @@ header.on-scroll {
         font-size: 14px;
     }
 
-    .section__desc {
-        margin-bottom: 32px;
+    .about-section .section__sub-title {
+        margin: 28px 0;
+    }
+
+    .about-section .section__desc {
+        margin-bottom: 0;
+        line-height: 1.4;
     }
 
     .about-section__download-btn {
         position: fixed;
-        padding: 12px 0;
+        padding: 8px 0;
         margin: 0;
         bottom: 0;
         left: 0;
