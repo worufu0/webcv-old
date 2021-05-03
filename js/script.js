@@ -25,7 +25,7 @@
     });
 
     // Hide menu after click nav
-    $('.menu__main__item').on('click', function () {
+    $('.menu-main__item').on('click', function () {
         if ($('html').hasClass('html__menu-show')) {
             $('html').removeClass('html__menu-show');
         } else {
@@ -37,42 +37,42 @@
     if ($('#pagepiling').length) {
         $('#pagepiling').pagepiling({
             scrollingSpeed: 280,
-            menu: '#menu, #menu__main',
+            menu: '#menu, #menu-main',
             anchors: [
-                'About',
-                'Skills',
-                'Education',
-                'Experience',
-                'Projects',
-                'Contact',
+                'about',
+                'skills',
+                'education',
+                'experience',
+                'projects',
+                'contact',
             ],
             loopTop: false,
             loopBottom: false,
             navigation: {
                 position: 'right',
                 tooltips: [
-                    'About',
-                    'Skills',
-                    'Education',
-                    'Experience',
-                    'Projects',
-                    'Contact',
+                    'about',
+                    'skills',
+                    'education',
+                    'experience',
+                    'projects',
+                    'contact',
                 ],
             },
             afterLoad: function (index, nextIndex, direction) {
                 const root = document.documentElement;
                 if (nextIndex == 5) {
-                    root.style.setProperty('--black', '#fff');
-                    root.style.setProperty('--blackish', '#fff');
-                    root.style.setProperty('--grey', '#fff');
+                    root.style.setProperty('--super-dark', '#fff');
+                    root.style.setProperty('--dark', '#fff');
+                    root.style.setProperty('--medium', '#fff');
                     root.style.setProperty('--accent', '#fff');
-                    root.style.setProperty('--white', '#333');
+                    root.style.setProperty('--light', '#333');
                 } else {
-                    root.style.setProperty('--black', '#242424');
-                    root.style.setProperty('--blackish', '#333');
-                    root.style.setProperty('--grey', '#787878');
+                    root.style.setProperty('--super-dark', '#242424');
+                    root.style.setProperty('--dark', '#333');
+                    root.style.setProperty('--medium', '#787878');
                     root.style.setProperty('--accent', '#ffa64d');
-                    root.style.setProperty('--white', '#fff');
+                    root.style.setProperty('--light', '#fff');
                 }
                 $('header').removeClass('on-scroll');
             },
@@ -86,9 +86,9 @@
             dots: false,
             nav: true,
             loop: true,
+            lazyLoad: true,
             mouseDrag: false,
             touchDrag: false,
-            margin: 3,
         });
     });
 })($);

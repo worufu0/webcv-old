@@ -31,8 +31,8 @@
                         worufu
                     </a>
                     <button class="header__hamburger menu-clickable">
-                        <span class="hamburger-stick"></span>
-                        <span class="hamburger-stick"></span>
+                        <span></span>
+                        <span></span>
                     </button>
                     <div class="header-content d-none d-md-block">
                         <div class="row">
@@ -57,25 +57,25 @@
                 </div>
                 <div class="menu-overlay menu-clickable"></div>
                 <div class="menu">
-                    <nav class="menu__main">
-                        <ul id="menu__main">
-                            <li data-menuanchor="About" class="active">
-                                <a href="#About">About</a>
+                    <nav>
+                        <ul id="menu-main">
+                            <li class="menu-main__item" data-menuanchor="about" class="active">
+                                <a href="#about">about</a>
                             </li>
-                            <li data-menuanchor="Skills" >
-                                <a href="#Skills">Skills</a>
+                            <li class="menu-main__item" data-menuanchor="skills" >
+                                <a href="#skills">skills</a>
                             </li>
-                            <li data-menuanchor="Education" >
-                                <a href="#Education">Education</a>
+                            <li class="menu-main__item" data-menuanchor="education" >
+                                <a href="#education">education</a>
                             </li>
-                            <li data-menuanchor="Experience" >
-                                <a href="#Experience">Experience</a>
+                            <li class="menu-main__item" data-menuanchor="experience" >
+                                <a href="#experience">experience</a>
                             </li>
-                            <li data-menuanchor="Projects" >
-                                <a href="#Projects">Projects</a>
+                            <li class="menu-main__item" data-menuanchor="projects" >
+                                <a href="#projects">projects</a>
                             </li>
-                            <li data-menuanchor="Contact" >
-                                <a href="#Contact">Contact</a>
+                            <li class="menu-main__item" data-menuanchor="contact" >
+                                <a href="#contact">contact</a>
                             </li>
                         </ul>
                     </nav>
@@ -107,28 +107,28 @@
 
             <div class="main-content">
                 <div id="pagepiling" class="slider-wrapper">
-                    <div class="section pp-scrollable bg-center-cover about-section on-scroll">
+                    <div class="section pp-scrollable about-section">
                         <div class="section-container">
                             <div class="section__bg">
-                                <div id="about-section__circle-1" class="bg-image circle-purple animate-element animation-delay-1 fade-in-left"></div>
-                                <div id="about-section__circle-2" class="bg-image circle-orange animate-element animation-delay-1 fade-in-right"></div>
-                                <div id="about-section__circle-3" class="bg-image circle-green animate-element animation-delay-1 fade-in-right"></div>
-                                <div id="about-section__potrait" class="bg-image ripple"></div>
+                                <div class="about-section__circle-1 bg-image circle-purple animate-element"></div>
+                                <div class="about-section__circle-2 bg-image circle-orange animate-element"></div>
+                                <div class="about-section__circle-3 bg-image circle-green animate-element"></div>
+                                <div class="about-section__potrait bg-image ripple"></div>
                             </div>
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-8 col-10">
-                                        <div class="about-section__number section__number accent-font">1</div>
-                                        <h1 class="about-section__title section__title animate-element delay3 fade-in-up">
+                                        <div class="section__number accent-font">1</div>
+                                        <h1 class="section__title accent-font animate-element">
                                             <span>to ngoc</span> thien phu
                                         </h1>
-                                        <h3 class="about-section__sub-title section__sub-title animate-element delay3 fade-in-left">
+                                        <h3 class="section__sub-title accent-font animate-element">
                                             web developer
                                         </h3>
-                                        <div class="section__desc animate-element delay3 fade-in-right">
+                                        <div class="section__desc animate-element">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                         </div>
-                                        <button class="about-section__download-btn animate-element delay3 fade-in-down">
+                                        <button class="about-section__download-btn animate-element">
                                             <a href="/">download cv as pdf</a>
                                         </button>
                                     </div>
@@ -137,33 +137,33 @@
                         </div>
                     </div>
 
-                    <div class="section pp-scrollable bg-center-cover skills-section">
+                    <div class="section pp-scrollable skills-section">
                         <div class="section-container">
                             <div class="section__bg">
-                                <div id="skills-section__circle-2" class="bg-image circle-green animate-element animation-delay-1 fade-in-left"></div>
-                                <div id="skills-section__circle-1" class="bg-image circle-purple animate-element animation-delay-1 fade-in-right"></div>
+                                <div class="skills-section__circle-2 bg-image circle-green animate-element"></div>
+                                <div class="skills-section__circle-1 bg-image circle-purple animate-element"></div>
                             </div>
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-7 col-12">
                                         <div class="section__number accent-font">2</div>
-                                        <h1 class="section__title animate-element delay1 fade-in-up">
+                                        <h1 class="section__title accent-font animate-element">
                                             skill<span>s</span>
                                         </h1>
                                     </div>
                                     <div class="col-lg-5 col-12">
-                                        <h3 class="section__sub-title float-right animate-element delay3 fade-in-left">
+                                        <h3 class="section__sub-title accent-font float-right animate-element">
                                             Some of my <span>skills</span> and <span>knowledge</span>   
                                         </h3>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-4 col-md-6 col-12 mb-4">
-                                        <div class="skills-section__card animate-element delay4 fade-in-left">
+                                        <div class="skills-section__card card-1 animate-element">
                                             <div class="skill-card__title accent-font">
                                                 programming languages
                                             </div>
-                                            <div class="skills-section__icon">
+                                            <div class="skill-card__icon">
                                                 <i class="lni lni-html5"></i>
                                             </div>
                                             <div class="skill-card__desc">
@@ -175,11 +175,11 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-6 col-12 mb-4">
-                                        <div class="skills-section__card animate-element delay4 fade-in-up">
+                                        <div class="skills-section__card card-2 animate-element">
                                             <div class="skill-card__title accent-font">
                                                 frameworks, platforms
                                             </div>
-                                            <div class="skills-section__icon">
+                                            <div class="skill-card__icon">
                                                 <i class="lni lni-nodejs"></i>
                                             </div>
                                             <div class="skill-card__desc">
@@ -190,11 +190,11 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-6 col-12 mb-4">
-                                        <div class="skills-section__card animate-element delay4 fade-in-right">
+                                        <div class="skills-section__card card-3 animate-element">
                                             <div class="skill-card__title accent-font">
                                                 ide
                                             </div>
-                                            <div class="skills-section__icon">
+                                            <div class="skill-card__icon">
                                                 <i class="lni lni-notepad"></i>
                                             </div>
                                             <div class="skill-card__desc">
@@ -205,11 +205,11 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-6 col-12 mb-4">
-                                        <div class="skills-section__card animate-element delay5 fade-in-left">
+                                        <div class="skills-section__card card-4 animate-element">
                                             <div class="skill-card__title accent-font">
                                                 database
                                             </div>
-                                            <div class="skills-section__icon">
+                                            <div class="skill-card__icon">
                                                 <i class="lni lni-database"></i>
                                             </div>
                                             <div class="skill-card__desc">
@@ -220,11 +220,11 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-6 col-12 mb-4">
-                                        <div class="skills-section__card animate-element delay5 fade-in-down">
+                                        <div class="skills-section__card card-5 animate-element">
                                             <div class="skill-card__title accent-font">
                                                 english
                                             </div>
-                                            <div class="skills-section__icon">
+                                            <div class="skill-card__icon">
                                                 <i class="lni lni-world"></i>
                                             </div>
                                             <div class="skill-card__desc">
@@ -234,11 +234,11 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-6 col-12 mb-4">
-                                        <div class="skills-section__card animate-element delay5 fade-in-right">
+                                        <div class="skills-section__card card-6 animate-element">
                                             <div class="skill-card__title accent-font">
                                                 knowledge
                                             </div>
-                                            <div class="skills-section__icon">
+                                            <div class="skill-card__icon">
                                                 <i class="lni lni-bulb"></i>
                                             </div>
                                             <div class="skill-card__desc">
@@ -254,11 +254,11 @@
                         </div>
                     </div>
 
-                    <div class="section pp-scrollable bg-center-cover education-section">
+                    <div class="section pp-scrollable education-section">
                         <div class="section-container">
                             <div class="section__bg">
-                                <div id="education-section__circle-1" class="bg-image circle-purple animate-element animation-delay-4 fade-in-left"></div>
-                                <div id="education-section__circle-2" class="bg-image circle-orange animate-element animation-delay-3 fade-in-right"></div>
+                                <div class="education-section__circle-1 bg-image circle-purple animate-element"></div>
+                                <div class="education-section__circle-2 bg-image circle-orange animate-element"></div>
                             </div>
                             <div class="container">
                                 <!--Here-->
@@ -266,11 +266,11 @@
                         </div>
                     </div>
 
-                    <div class="section pp-scrollable bg-center-cover experience-section">
+                    <div class="section pp-scrollable experience-section">
                         <div class="section-container">
                             <div class="section__bg">
-                                <div id="experience-section__circle-1" class="bg-image circle-green animate-element animation-delay-3 fade-in-left"></div>
-                                <div id="experience-section__circle-2" class="bg-image circle-orange animate-element animation-delay-3 fade-in-right"></div>
+                                <div class="experience-section__circle-1 bg-image circle-green animate-element"></div>
+                                <div class="experience-section__circle-2 bg-image circle-orange animate-element"></div>
                             </div>
                             <div class="container">
                                 <!--Here-->
@@ -278,37 +278,37 @@
                         </div>
                     </div>
                     
-                    <div class="section pp-scrollable bg-center-cover projects-section">
+                    <div class="section pp-scrollable projects-section">
                         <div class="owl-carousel">
                             <div class="section-container project-1">
-                                <div class="section__bg bg-project-1">
-                                    <div id="projects-section-1__image-1" class="bg-image"></div>
-                                    <div id="projects-section-1__image-2" class="bg-image"></div>
-                                    <div id="projects-section-1__image-3" class="bg-image"></div>
+                                <div class="section__bg">
+                                    <div class="project-1__image-1 bg-image animate-element"></div>
+                                    <div class="project-1__image-2 bg-image animate-element"></div>
+                                    <div class="project-1__image-3 bg-image animate-element"></div>
                                 </div>
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-lg-7 col-12">
                                             <div class="section__number accent-font">5</div>
-                                            <h1 class="section__title animate-element delay1 fade-in-up">
+                                            <h1 class="section__title accent-font animate-element">
                                                 project<span>s</span>
                                             </h1>
-                                            <h3 class="about-section__sub-title section__sub-title animate-element delay3 fade-in-left">
+                                            <h3 class="section__sub-title accent-font animate-element">
                                                 food recipes
                                             </h3>
-                                            <div class="section__keywords accent-font animate-element delay3 fade-in-right">
+                                            <div class="projects-section__keywords accent-font animate-element">
                                                 <div>WPF</div>
                                                 <div>C# NET</div>
                                                 <div>Fody/PropertyChanged</div>
                                             </div>
-                                            <div class="section__desc animate-element delay3 fade-in-right">
+                                            <div class="section__desc animate-element">
                                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                             </div>
                                             <div>
-                                                <button class="project-section__btn animate-element delay3 fade-in-down">
+                                                <button class="projects-section__btn animate-element">
                                                     <a href="#">demo</a>
                                                 </button>
-                                                <button class="project-section__btn animate-element delay3 fade-in-down">
+                                                <button class="projects-section__btn animate-element">
                                                     <a href="#">source</a>
                                                 </button>
                                             </div>
@@ -317,36 +317,36 @@
                                 </div>
                             </div>
                             <div class="section-container project-2">
-                                <div class="section__bg bg-project-2">
-                                    <div id="projects-section-2__image" class="bg-image">
-                                        <div class="projects-section-2__image-layer"></div>
-                                        <div class="projects-section-2__image-layer"></div>
-                                        <div class="projects-section-2__image-layer"></div>
+                                <div class="section__bg">
+                                    <div class="project-2__image bg-image">
+                                        <div class="animate-element"></div>
+                                        <div class="animate-element"></div>
+                                        <div class="animate-element"></div>
                                     </div>
                                 </div>
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-lg-7 col-12">
                                             <div class="section__number accent-font">5</div>
-                                            <h1 class="section__title animate-element delay1 fade-in-up">
+                                            <h1 class="section__title accent-font animate-element">
                                                 project<span>s</span>
                                             </h1>
-                                            <h3 class="about-section__sub-title section__sub-title animate-element delay3 fade-in-left">
+                                            <h3 class="section__sub-title accent-font animate-element">
                                                 we split
                                             </h3>
-                                            <div class="section__keywords accent-font animate-element delay3 fade-in-right">
+                                            <div class="projects-section__keywords accent-font animate-element">
                                                 <div>WPF</div>
                                                 <div>C# NET</div>
                                                 <div>LiveCharts</div>
                                             </div>
-                                            <div class="section__desc animate-element delay3 fade-in-right">
+                                            <div class="section__desc animate-element">
                                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                             </div>
                                             <div>
-                                                <button class="project-section__btn animate-element delay3 fade-in-down">
+                                                <button class="projects-section__btn animate-element">
                                                     <a href="#">demo</a>
                                                 </button>
-                                                <button class="project-section__btn animate-element delay3 fade-in-down">
+                                                <button class="projects-section__btn animate-element">
                                                     <a href="#">source</a>
                                                 </button>
                                             </div>
@@ -355,39 +355,39 @@
                                 </div>
                             </div>
                             <div class="section-container project-3">
-                                <div class="section__bg bg-project-3">
-                                    <div id="projects-section-3__image-1" class="bg-image"></div>
-                                    <div id="projects-section-3__image-2" class="bg-image">
-                                        <div class="projects-section-3__image-2-part"></div>
-                                        <div class="projects-section-3__image-2-part"></div>
-                                        <div class="projects-section-3__image-2-part"></div>
-                                        <div class="projects-section-3__image-2-part"></div>
+                                <div class="section__bg">
+                                    <div class="project-3__image-1 bg-image"></div>
+                                    <div class="project-3__image-2 bg-image">
+                                        <div class="animate-element"></div>
+                                        <div class="animate-element"></div>
+                                        <div class="animate-element"></div>
+                                        <div class="animate-element"></div>
                                     </div>
                                 </div>
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-lg-7 col-12">
                                             <div class="section__number accent-font">5</div>
-                                            <h1 class="section__title animate-element delay1 fade-in-up">
+                                            <h1 class="section__title accent-font animate-element">
                                                 project<span>s</span>
                                             </h1>
-                                            <h3 class="about-section__sub-title section__sub-title animate-element delay3 fade-in-left">
+                                            <h3 class="section__sub-title accent-font animate-element">
                                                 cake shop
                                             </h3>
-                                            <div class="section__keywords accent-font animate-element delay3 fade-in-right">
+                                            <div class="projects-section__keywords accent-font animate-element">
                                                 <div>WPF</div>
                                                 <div>C# NET</div>
                                                 <div>LiveCharts</div>
                                                 <div>MaterialDesign</div>
                                             </div>
-                                            <div class="section__desc animate-element delay3 fade-in-right">
+                                            <div class="section__desc animate-element">
                                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                             </div>
                                             <div>
-                                                <button class="project-section__btn animate-element delay3 fade-in-down">
+                                                <button class="projects-section__btn animate-element">
                                                     <a href="#">demo</a>
                                                 </button>
-                                                <button class="project-section__btn animate-element delay3 fade-in-down">
+                                                <button class="projects-section__btn animate-element">
                                                     <a href="#">source</a>
                                                 </button>
                                             </div>
@@ -396,35 +396,37 @@
                                 </div>
                             </div>
                             <div class="section-container project-4">
-                                <div class="section__bg bg-project-4">
-                                    <div id="projects-section-4__image" class="bg-image"></div>
+                                <div class="section__bg">
+                                    <div class="project-4__image-1 bg-image animate-element"></div>
+                                    <div class="project-4__image-2 bg-image"></div>
+                                    <div class="project-4__image-3 bg-image"></div>
                                 </div>
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-lg-7 col-12">
                                             <div class="section__number accent-font">5</div>
-                                            <h1 class="section__title animate-element delay1 fade-in-up">
+                                            <h1 class="section__title accent-font animate-element">
                                                 project<span>s</span>
                                             </h1>
-                                            <h3 class="about-section__sub-title section__sub-title animate-element delay3 fade-in-left">
+                                            <h3 class="section__sub-title accent-font animate-element">
                                                 notoli shoes
                                             </h3>
-                                            <div class="section__keywords accent-font animate-element delay3 fade-in-right">
+                                            <div class="projects-section__keywords accent-font animate-element">
                                                 <div>WPF</div>
                                                 <div>C# NET</div>
                                                 <div>Aspose</div>
                                                 <div>EntityFramework</div>
                                                 <div>MVVM</div>
-                                                <div>MySQL</div>
+                                                <div>Microsoft SQL Server</div>
                                             </div>
-                                            <div class="section__desc animate-element delay3 fade-in-right">
+                                            <div class="section__desc animate-element">
                                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                             </div>
                                             <div>
-                                                <button class="project-section__btn animate-element delay3 fade-in-down">
+                                                <button class="projects-section__btn animate-element">
                                                     <a href="#">demo</a>
                                                 </button>
-                                                <button class="project-section__btn animate-element delay3 fade-in-down">
+                                                <button class="projects-section__btn animate-element">
                                                     <a href="#">source</a>
                                                 </button>
                                             </div>
@@ -433,37 +435,44 @@
                                 </div>
                             </div>
                             <div class="section-container project-5">
-                                <div class="section__bg bg-project-5">
-                                    <div id="projects-section-4__image" class="bg-image"></div>
+                                <div class="section__bg">
+                                    <div class="project-5__image-1 bg-image"></div>
+                                    <div class="project-5__image-2 bg-image animate-element"></div>
+                                    <div class="project-5__image-3 bg-image animate-element"></div>
+                                    <div class="project-5__image-4 bg-image animate-element"></div>
+                                    <div class="project-5__image-5 bg-image animate-element"></div>
+                                    <div class="project-5__image-6 bg-image animate-element"></div>
+                                    <div class="project-5__image-7 bg-image animate-element"></div>
                                 </div>
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-lg-7 col-12">
                                             <div class="section__number accent-font">5</div>
-                                            <h1 class="section__title animate-element delay1 fade-in-up">
+                                            <h1 class="section__title accent-font animate-element">
                                                 project<span>s</span>
                                             </h1>
-                                            <h3 class="about-section__sub-title section__sub-title animate-element delay3 fade-in-left">
+                                            <h3 class="section__sub-title accent-font animate-element">
                                                 notoli watch
                                             </h3>
-                                            <div class="section__keywords accent-font animate-element delay3 fade-in-right">
+                                            <div class="projects-section__keywords accent-font animate-element">
                                                 <div>PHP</div>
                                                 <div>HTML5</div>
                                                 <div>CSS3</div>
                                                 <div>Javascript</div>
+                                                <div>Bootstrap 4</div>
                                                 <div>AJAX</div>
                                                 <div>MVC</div>
                                                 <div>MySQL</div>
                                                 <div>Chrome DevTools</div>
                                             </div>
-                                            <div class="section__desc animate-element delay3 fade-in-right">
+                                            <div class="section__desc animate-element">
                                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                             </div>
                                             <div>
-                                                <button class="project-section__btn animate-element delay3 fade-in-down">
-                                                    <a href="#">demo</a>
+                                                <button class="projects-section__btn animate-element">
+                                                    <a href="#">live demo</a>
                                                 </button>
-                                                <button class="project-section__btn animate-element delay3 fade-in-down">
+                                                <button class="projects-section__btn animate-element">
                                                     <a href="#">source</a>
                                                 </button>
                                             </div>
@@ -474,7 +483,7 @@
                         </div>
                     </div>
 
-                    <div class="section pp-scrollable bg-center-cover contact-section">
+                    <div class="section pp-scrollable contact-section">
                         <div class="section-container">
                             <div class="container">
                                 <!--Here-->
@@ -484,7 +493,7 @@
                 </div>
             </div>
 
-        <footer id="footer">
+        <footer>
             <div class="footer__copyright d-none d-md-block">
                 &copy; worufu 2021<br />
                 all right reserved
