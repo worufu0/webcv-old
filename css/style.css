@@ -1,5 +1,26 @@
 /*-------------------------------------------------------------------------------
-    Declare
+    1.Declare
+    2.Available tags
+    3.Custom style
+    4.Preloader
+    5.Header
+    6.Footer
+    7.Menu
+    8.Main content
+    9.About section
+    10.Skills section
+    11.Education section
+    12.Experience section
+    13.Projects section
+    14.Contact section
+    15.Animation
+    16.Pagepiling
+    17.Owlcarousel
+    18.Responsive
+-------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------
+    1.Declare
 -------------------------------------------------------------------------------*/
 :root {
     --super-dark: #242424;
@@ -74,7 +95,35 @@ input:focus {
 }
 
 /*-------------------------------------------------------------------------------
-    Preloader
+    Custom style
+-------------------------------------------------------------------------------*/
+[class^='.row .col-'] {
+    margin-bottom: 30px;
+}
+
+.accent-font {
+    font-family: 'Krona One', sans-serif !important;
+}
+
+[class^='circle-'],
+[class*='circle-'] {
+    border-radius: 50%;
+}
+
+.circle-purple {
+    background-color: rgba(227, 175, 255, 0.8);
+}
+
+.circle-green {
+    background-color: rgba(214, 255, 144, 0.8);
+}
+
+.circle-orange {
+    background-color: rgba(255, 211, 166, 0.8);
+}
+
+/*-------------------------------------------------------------------------------
+    4.Preloader
 -------------------------------------------------------------------------------*/
 .preloader {
     position: fixed;
@@ -125,7 +174,7 @@ input:focus {
 }
 
 /*-------------------------------------------------------------------------------
-    Header
+    5.Header
 -------------------------------------------------------------------------------*/
 header {
     padding: 8px 0;
@@ -219,7 +268,22 @@ header.on-scroll {
 }
 
 /*-------------------------------------------------------------------------------
-    Menu
+    6.Footer
+-------------------------------------------------------------------------------*/
+.footer__copyright {
+    color: var(--medium);
+    font-weight: bold;
+    font-size: 10px;
+    text-transform: uppercase;
+    position: fixed;
+    left: 12px;
+    bottom: 12px;
+    z-index: 996;
+    opacity: 0.6;
+}
+
+/*-------------------------------------------------------------------------------
+    7.Menu
 -------------------------------------------------------------------------------*/
 .menu {
     position: fixed;
@@ -353,8 +417,17 @@ header.on-scroll {
 }
 
 /*-------------------------------------------------------------------------------
-    Main content
+    8.Main content
 -------------------------------------------------------------------------------*/
+.container {
+    max-width: 1200px;
+}
+
+.slider-wrapper .container {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
 .section-container {
     background-size: cover;
     background-position: 50% 50%;
@@ -428,7 +501,7 @@ header.on-scroll {
     line-height: 1;
     color: var(--accent);
     text-transform: uppercase;
-    animation: fadeInDown 0.5s ease-in-out 0.5s both;
+    animation: fadeInDown 1s ease-in-out 1s both;
 }
 
 .section__title span {
@@ -443,7 +516,7 @@ header.on-scroll {
     line-height: 1.5;
     color: var(--dark);
     text-transform: uppercase;
-    animation: fadeInRight 0.5s ease-in-out 0.5s both;
+    animation: fadeInRight 1s ease-in-out 1s both;
 }
 
 .section__sub-title span {
@@ -466,7 +539,7 @@ header.on-scroll {
     margin-bottom: 52px;
     color: var(--medium);
     line-height: 1.5;
-    animation: fadeInLeft 0.5s ease-in-out 0.5s both;
+    animation: fadeInUp 1s ease-in-out 1s both;
 }
 
 .section__number {
@@ -475,43 +548,45 @@ header.on-scroll {
     opacity: 0.6;
 }
 /*-------------------------------------------------------------------------------
-    About section
+    9.About section
 -------------------------------------------------------------------------------*/
 .about-section {
     padding-bottom: 80px;
 }
 
 .about-section__download-btn {
-    padding: 16px 48px;
+    font-size: 15px;
+    padding: 16px 44px;
     text-transform: uppercase;
-    background-color: #fff;
-    color: #333;
-    border: 1px solid #333;
+    background-color: #333;
+    color: #fff;
+    border: none;
 }
 
-.about-section__download-btn:hover {
-    color: #fff;
+.about-section__download-btn a {
+    outline: none;
+}
+
+.about-section__download-btn a i {
+    padding: 0 4px;
 }
 
 .about-section__download-btn::before {
     content: '';
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
     background-color: #333;
-    width: 0;
     font-weight: bold;
     z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
 }
 
 .about-section__download-btn:hover::before {
-    width: 100%;
-}
-
-.about-section__download-btn:hover,
-.about-section__download-btn:hover::before {
-    transition: ease-in-out 0.5s;
+    opacity: 0.3;
 }
 
 .about-section__potrait {
@@ -527,7 +602,7 @@ header.on-scroll {
     top: 44% !important;
     bottom: auto !important;
     right: auto !important;
-    animation: fadeInLeft ease-in-out 0.5s both;
+    animation: fadeInLeft ease-in-out 1s both;
 }
 
 .about-section__circle-2 {
@@ -537,7 +612,7 @@ header.on-scroll {
     top: 52% !important;
     bottom: auto !important;
     right: auto !important;
-    animation: fadeInUp ease-in-out 0.5s both;
+    animation: fadeInUp ease-in-out 1s both;
 }
 
 .about-section__circle-3 {
@@ -547,15 +622,15 @@ header.on-scroll {
     top: -55% !important;
     bottom: auto !important;
     right: auto !important;
-    animation: fadeInRight ease-in-out 0.5s both;
+    animation: fadeInRight ease-in-out 1s both;
 }
 
 .about-section__download-btn {
-    animation: fadeInUp 0.5s ease-in-out 0.5s both;
+    animation: fadeInUp 1s ease-in-out 1s both;
 }
 
 /*-------------------------------------------------------------------------------
-    Skills section
+    10.Skills section
 -------------------------------------------------------------------------------*/
 .skills-section__card {
     display: flex;
@@ -568,27 +643,27 @@ header.on-scroll {
 }
 
 .skills-section__card.card-1 {
-    animation: fadeInUp 1s ease-in-out 0.3s both;
+    animation: fadeInRight 1s ease-in-out 1s both;
 }
 
 .skills-section__card.card-2 {
-    animation: fadeInUp 1.2s ease-in-out 0.3s both;
+    animation: fadeInRight 1.2s ease-in-out 1s both;
 }
 
 .skills-section__card.card-3 {
-    animation: fadeInUp 1.4s ease-in-out 0.3s both;
+    animation: fadeInRight 1.4s ease-in-out 1s both;
 }
 
 .skills-section__card.card-4 {
-    animation: fadeInUp 1.6s ease-in-out 0.3s both;
+    animation: fadeInRight 1.6s ease-in-out 1s both;
 }
 
 .skills-section__card.card-5 {
-    animation: fadeInUp 1.8s ease-in-out 0.3s both;
+    animation: fadeInRight 1.8s ease-in-out 1s both;
 }
 
 .skills-section__card.card-6 {
-    animation: fadeInUp 2s ease-in-out 0.3s both;
+    animation: fadeInRight 2s ease-in-out 1s both;
 }
 
 .skill-card__title {
@@ -621,7 +696,7 @@ header.on-scroll {
     bottom: 10% !important;
     top: auto !important;
     left: auto !important;
-    animation: fadeInRight ease-in-out 0.5s both;
+    animation: fadeInRight ease-in-out 1s both;
 }
 
 .skills-section__circle-2 {
@@ -631,11 +706,11 @@ header.on-scroll {
     top: -20% !important;
     bottom: auto !important;
     right: auto !important;
-    animation: fadeInLeft ease-in-out 0.5s both;
+    animation: fadeInLeft ease-in-out 1s both;
 }
 
 /*-------------------------------------------------------------------------------
-    Education section
+    11.Education section
 -------------------------------------------------------------------------------*/
 .education-section__circle-1 {
     width: 720px;
@@ -644,7 +719,7 @@ header.on-scroll {
     top: 60% !important;
     bottom: auto !important;
     right: auto !important;
-    animation: fadeInLeft ease-in-out 0.5s both;
+    animation: fadeInLeft ease-in-out 1s both;
 }
 
 .education-section__circle-2 {
@@ -654,11 +729,11 @@ header.on-scroll {
     top: 40% !important;
     bottom: auto !important;
     left: auto !important;
-    animation: fadeInRight ease-in-out 0.5s both;
+    animation: fadeInRight ease-in-out 1s both;
 }
 
 /*-------------------------------------------------------------------------------
-    Experience section
+    12.Experience section
 -------------------------------------------------------------------------------*/
 .experience-section__circle-1 {
     width: 132px;
@@ -667,7 +742,7 @@ header.on-scroll {
     top: 60% !important;
     bottom: auto !important;
     right: auto !important;
-    animation: fadeInLeft ease-in-out 0.5s both;
+    animation: fadeInLeft ease-in-out 1s both;
 }
 
 .experience-section__circle-2 {
@@ -677,17 +752,16 @@ header.on-scroll {
     top: 83% !important;
     bottom: auto !important;
     left: auto !important;
-    animation: fadeInRight ease-in-out 0.5s both;
+    animation: fadeInRight ease-in-out 1s both;
 }
 
 /*-------------------------------------------------------------------------------
-    Projects section
+    13.Projects section
 -------------------------------------------------------------------------------*/
 .projects-section__keywords {
     color: #333;
     font-size: 12px;
     margin-bottom: 8px;
-    animation: fadeInRight 0.5s ease-in-out 0.5s both;
 }
 
 .projects-section__keywords div {
@@ -696,6 +770,7 @@ header.on-scroll {
     padding: 4px;
     margin: 4px 0;
     border-radius: 4px;
+    animation: fadeInRight 1s ease-in-out 1s both;
 }
 
 .projects-section__btn {
@@ -704,12 +779,15 @@ header.on-scroll {
     text-transform: capitalize;
     text-decoration: underline;
     border: none;
-    text-underline-offset: 3px;
-    font-weight: bold;
+    text-underline-offset: 8px;
     font-size: 20px;
     padding: 0;
     margin: 0 8px;
-    animation: fadeInUp 0.5s ease-in-out 0.5s both;
+    animation: fadeInUp 1s ease-in-out 1s both;
+}
+
+.projects-section__btn:hover {
+    text-decoration: none;
 }
 
 .projects-section__btn:nth-child(1) {
@@ -738,7 +816,7 @@ header.on-scroll {
 .project-1 .section__bg div {
     background-size: contain;
     position: absolute;
-    animation: zoomIn ease-in-out 0.5s both;
+    animation: zoomIn ease-in-out 1s both;
 }
 
 .project-1__image-1 {
@@ -790,7 +868,7 @@ header.on-scroll {
     box-shadow: 20px 20px 80px #000;
     backface-visibility: hidden;
     background-image: url(../img/we-split.webp);
-    animation: zoomIn ease-in-out 0.5s both;
+    animation: zoomIn ease-in-out 1s both;
 }
 
 .project-2__image div:nth-child(1) {
@@ -849,7 +927,7 @@ header.on-scroll {
     height: 180px;
     bottom: 0;
     left: 0;
-    animation: fadeInLeft ease-in-out 0.5s both;
+    animation: fadeInLeft ease-in-out 1s both;
 }
 
 .project-3__image-2 div:nth-child(2) {
@@ -858,7 +936,7 @@ header.on-scroll {
     height: 202px;
     top: 0;
     right: 8%;
-    animation: fadeInRight ease-in-out 0.5s both;
+    animation: fadeInRight ease-in-out 1s both;
 }
 
 .project-3__image-2 div:nth-child(3) {
@@ -867,7 +945,7 @@ header.on-scroll {
     height: 280px;
     top: 0;
     left: 0;
-    animation: fadeInDown ease-in-out 0.5s both;
+    animation: fadeInDown ease-in-out 1s both;
 }
 
 .project-3__image-2 div:nth-child(4) {
@@ -876,7 +954,7 @@ header.on-scroll {
     height: 250px;
     bottom: 0;
     right: 8%;
-    animation: fadeInUp ease-in-out 0.5s both;
+    animation: fadeInUp ease-in-out 1s both;
 }
 
 /*-------------------- Project 4 --------------------*/
@@ -897,7 +975,7 @@ header.on-scroll {
     background-image: url(../img/notoli-shoes-1.webp);
     width: 50%;
     left: 45%;
-    animation: swing ease-in-out 0.5s both;
+    animation: pulse ease-in-out 1s both;
 }
 
 .project-4__image-2,
@@ -932,7 +1010,7 @@ header.on-scroll {
     background-size: contain;
     filter: brightness(0.9) drop-shadow(20px 20px 20px #000) blur(0px);
     position: absolute;
-    animation: zoomIn ease-in-out 0.5s both;
+    animation: zoomIn ease-in-out 1s both;
 }
 
 .project-5__image-1 {
@@ -972,7 +1050,7 @@ header.on-scroll {
 .project-5__image-5 {
     background-image: url(../img/notoli-watch-5.webp);
     width: 15%;
-    top: -90%;
+    top: -100%;
     left: 10%;
     transform: rotate(-20deg);
 }
@@ -993,168 +1071,15 @@ header.on-scroll {
     left: 70%;
     transform: rotate(-90deg);
 }
-
 /*-------------------------------------------------------------------------------
-    Footer
+    14.Contact section
 -------------------------------------------------------------------------------*/
-.footer__copyright {
-    color: var(--medium);
-    font-weight: bold;
-    font-size: 10px;
-    text-transform: uppercase;
-    position: fixed;
-    left: 12px;
-    bottom: 12px;
-    z-index: 996;
-    opacity: 0.6;
-}
 
 /*-------------------------------------------------------------------------------
-    Unknown
+    15.Animation
 -------------------------------------------------------------------------------*/
 .section:not(.active) .animate-element {
     animation-name: none;
-}
-
-/*-------------------------------------------------------------------------------
-    Animation
--------------------------------------------------------------------------------*/
-@-webkit-keyframes fade-zoom {
-    from {
-        opacity: 0;
-        margin-left: -192px;
-        transform: scale3d(0.6, 0.6, 0.6);
-        -webkit-transform: scale3d(0.6, 0.6, 0.6);
-    }
-    100% {
-        opacity: 1;
-        margin-left: 0;
-    }
-}
-
-@keyframes fade-zoom {
-    from {
-        opacity: 0;
-        margin-left: -192px;
-        transform: scale3d(0.6, 0.6, 0.6);
-        -webkit-transform: scale3d(0.6, 0.6, 0.6);
-    }
-    100% {
-        opacity: 1;
-        margin-left: 0;
-    }
-}
-
-@-webkit-keyframes fade-in-up {
-    from {
-        opacity: 0;
-        transform: translate3d(0, -100px, 0);
-        -webkit-transform: translate3d(0, -100px, 0);
-    }
-
-    to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-        -webkit-transform: translate3d(0, 0, 0);
-    }
-}
-
-@keyframes fade-in-up {
-    from {
-        opacity: 0;
-        transform: translate3d(0, -100px, 0);
-        -webkit-transform: translate3d(0, -100px, 0);
-    }
-
-    to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-        -webkit-transform: translate3d(0, 0, 0);
-    }
-}
-
-@-webkit-keyframes fade-in-down {
-    from {
-        opacity: 0;
-        transform: translate3d(0, 160px, 0);
-        -webkit-transform: translate3d(0, 160px, 0);
-    }
-
-    to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-        -webkit-transform: translate3d(0, 0, 0);
-    }
-}
-
-@keyframes fade-in-down {
-    from {
-        opacity: 0;
-        transform: translate3d(0, 160px, 0);
-        -webkit-transform: translate3d(0, 160px, 0);
-    }
-
-    to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-        -webkit-transform: translate3d(0, 0, 0);
-    }
-}
-
-@-webkit-keyframes fade-in-left {
-    from {
-        opacity: 0;
-        transform: translate3d(-160px, 0, 0);
-        -webkit-transform: translate3d(-160px, 0, 0);
-    }
-
-    to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-        -webkit-transform: translate3d(0, 0, 0);
-    }
-}
-
-@keyframes fade-in-left {
-    from {
-        opacity: 0;
-        transform: translate3d(-160px, 0, 0);
-        -webkit-transform: translate3d(-160px, 0, 0);
-    }
-
-    to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-        -webkit-transform: translate3d(0, 0, 0);
-    }
-}
-
-@-webkit-keyframes fade-in-right {
-    from {
-        opacity: 0;
-        transform: translate3d(160px, 0, 0);
-        -webkit-transform: translate3d(160px, 0, 0);
-    }
-
-    to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-        -webkit-transform: translate3d(0, 0, 0);
-    }
-}
-
-@keyframes fade-in-right {
-    from {
-        opacity: 0;
-        transform: translate3d(160px, 0, 0);
-        -webkit-transform: translate3d(160px, 0, 0);
-    }
-
-    to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-        -webkit-transform: translate3d(0, 0, 0);
-    }
 }
 
 @keyframes top {
@@ -1217,79 +1142,9 @@ header.on-scroll {
     }
 }
 
-@keyframes ripple {
-    50% {
-        transform: translateY(40px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-.fade-zoom {
-    animation-name: fade-zoom;
-    -webkit-animation-name: fade-zoom;
-}
-
-.fade-in-down {
-    animation-name: fade-in-down;
-    -webkit-animation-name: fade-in-down;
-}
-
-.fade-in-up {
-    animation-name: fade-in-up;
-    -webkit-animation-name: fade-in-up;
-}
-
-.fade-in-left {
-    animation-name: fade-in-left;
-    -webkit-animation-name: fade-in-left;
-}
-
-.fade-in-right {
-    animation-name: fade-in-right;
-    -webkit-animation-name: fade-in-right;
-}
-
-.ripple {
-    animation-name: ripple;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
-}
-
 /*-------------------------------------------------------------------------------
-    Custom style
+    16.Pagepiling
 -------------------------------------------------------------------------------*/
-
-[class^='.row .col-'] {
-    margin-bottom: 30px;
-}
-
-.accent-font {
-    font-family: 'Krona One', sans-serif !important;
-}
-
-[class^='circle-'],
-[class*='circle-'] {
-    border-radius: 50%;
-}
-
-.circle-purple {
-    background-color: rgba(227, 175, 255, 0.8);
-}
-
-.circle-green {
-    background-color: rgba(214, 255, 144, 0.8);
-}
-
-.circle-orange {
-    background-color: rgba(255, 211, 166, 0.8);
-}
-
-/*-------------------------------------------------------------------------------
-    Pagepiling
--------------------------------------------------------------------------------*/
-
 #pp-nav.right {
     right: 0;
 }
@@ -1302,6 +1157,7 @@ header.on-scroll {
 
 #pp-nav li a {
     display: block;
+    outline: none;
 }
 
 #pp-nav span {
@@ -1330,7 +1186,7 @@ header.on-scroll {
 }
 
 /*-------------------------------------------------------------------------------
-    Owl carousel
+    17.Owl carousel
 -------------------------------------------------------------------------------*/
 .owl-carousel .section-container {
     height: 100vh;
@@ -1363,28 +1219,17 @@ header.on-scroll {
     opacity: 1;
     transition: ease-in-out 0.5s;
 }
+
 /*-------------------------------------------------------------------------------
-    Responsive
+    18.Responsive
 -------------------------------------------------------------------------------*/
-
-@media (max-width: 575px) {
-    .menu {
-        width: 100%;
-    }
-
-    .slider-wrapper .container {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .slider-wrapper .slide-personal-projects .container {
-        padding-right: 24px;
-    }
-}
-
 @media (max-width: 767px) {
     html {
         font-size: 14px;
+    }
+
+    .section__desc {
+        line-height: 1.4;
     }
 
     .about-section .section__sub-title {
@@ -1393,38 +1238,53 @@ header.on-scroll {
 
     .about-section .section__desc {
         margin-bottom: 0;
-        line-height: 1.4;
     }
 
     .about-section__download-btn {
         position: fixed;
-        padding: 8px 0;
+        padding: 12px 0;
         margin: 0;
         bottom: 0;
         left: 0;
         right: 0;
         width: 100%;
-        background-color: var(--super-dark);
-        color: var(--light);
-        border: none;
+        background-color: #333;
+        color: #fff;
     }
 
     .about-section__download-btn::before {
         display: none;
     }
 
+    .projects-section .section-container {
+        padding-bottom: 28px;
+    }
+
+    .projects-section .section__desc,
+    .projects-section__keywords {
+        margin-right: 10%;
+    }
+
+    .projects-section .section__desc {
+        margin-bottom: 20px;
+    }
     .projects-section__keywords {
         font-size: 10px;
     }
 
-    .projects-section .section-container {
-        padding-bottom: 28px;
+    .projects-section__btn {
+        text-underline-offset: 4px;
+        font-size: 16px;
     }
 
     .owl-nav {
         padding: 0 16px;
         top: 100%;
         transform: translateY(-100%);
+    }
+
+    .menu {
+        width: 100%;
     }
 }
 
@@ -1436,22 +1296,20 @@ header.on-scroll {
     .projects-section__keywords {
         font-size: 11px;
     }
+
+    .projects-section__btn {
+        text-underline-offset: 6px;
+        font-size: 18px;
+    }
 }
 
 @media (max-width: 1023px) {
+    .slider-wrapper .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
     .skills-section__card {
         padding: 12px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1200px;
-    }
-}
-
-@media (min-width: 1600px) {
-    #pp-nav.right {
-        right: 56px;
     }
 }
