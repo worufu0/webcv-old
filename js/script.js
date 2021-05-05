@@ -86,10 +86,9 @@
             dots: false,
             nav: true,
             loop: true,
+            smartSpeed: 500,
             mouseDrag: false,
             touchDrag: false,
-            animateIn: 'fadeIn',
-            animateOut: 'fadeOut',
         });
     });
 })($);
